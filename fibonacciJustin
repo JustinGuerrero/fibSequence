@@ -1,0 +1,30 @@
+// this is a java based code, and was written in intelliJ IDEA on
+// 02/05/2019 by Justin Guerrero
+
+
+class Fibonacci{
+
+  static int fibRecursive(int n){
+      if(n <= 1){
+        return n;}
+        return fibRecursive(n - 1) + fibRecursive(n - 2);
+        }
+        
+  static int fibIterative(int n){
+        int fib_1 = 1;
+        int fib_2 = 1;
+        for(int i = 0; i < n; ++i){
+          int fib_temp = fib_1;   // creates temp value to be held
+          fib_1 = fib_2 + fib_1; // creates the sequence
+          fib_2 = fib_3          // takes the last value of fib_2 and changes it to the previous number
+          }
+      return fib_1;
+      }
+      
+ public static void main(String[], args){
+      Fibonacci tester = new Fibonacci();
+      System.out.println(tester.fibRecursive(9));
+      System.out.println(tester.fibIterative(9)):
+      }
+      
+      // 34 should be the result of these
